@@ -21,8 +21,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "docpad": ">=6.46 <7",
-	"docpad-plugin-tags": ">=2.07"
+    "docpad": ">=6.46 <7"
   },
   "devDependencies": {
     "docpad": ">=6.46 <7",
