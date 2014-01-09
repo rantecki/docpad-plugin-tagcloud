@@ -1,0 +1,36 @@
+{
+  "name": "docpad-plugin-tagcloud",
+  "version": "2.0.0",
+  "description": "DocPad plugin providing tag cloud generation",
+  "homepage": "https://github.com/rantecki/docpad-plugin-tagcloud",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "tagging"
+  ],
+  "author": "Richard Antecki <richard@antecki.id.au> (richard.antecki.id.au)",
+  "bugs": {
+    "url": "https://github.com/rantecki/docpad-plugin-tagcloud/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/rantecki/docpad-plugin-tagcloud.git"
+  },
+  "engines": {
+    "node": ">=0.4"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "docpad": ">=6.46 <7",
+	"docpad-plugin-tags": ">=2.07",
+  },
+  "devDependencies": {
+    "docpad": ">=6.46 <7",
+    "coffee-script": "~1.6.2"
+  },
+  "main": "./out/tagcloud.plugin.js",
+  "scripts": {
+    "test": "node ./test/tagcloud.test.js",
+    "prepublish": "cake compile"
+  }
+}
