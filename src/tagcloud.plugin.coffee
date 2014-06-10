@@ -25,6 +25,7 @@ module.exports = (BasePlugin) ->
 
 		renderBefore: ({collection, templateData}, next) ->
 			config = @getConfig()
+			docpad = @docpad
 
 			@tagCloud = {}	# reset every time renderBefore is triggered
 			@maxCount = 0
