@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-tagcloud",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "DocPad plugin providing tag cloud generation",
   "homepage": "https://github.com/rantecki/docpad-plugin-tagcloud",
   "keywords": [
