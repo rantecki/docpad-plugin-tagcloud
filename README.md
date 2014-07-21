@@ -53,7 +53,7 @@ By default, the tag weights are calculated using a simple logarithmic algorithm.
 
 ```
 plugins:
-    tagging:
+    tagcloud:
         getTagWeight: (count, maxCount) ->
             return count/maxCount
 ```
