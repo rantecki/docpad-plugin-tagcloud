@@ -6,6 +6,8 @@ module.exports = (BasePlugin) ->
 		config:
 			collectionName: 'tags'
 			logLevel: 'info'
+			getTaggedFiles: (docpad, tag) ->
+				return docpad.getFiles({tags: $has: tag})
 
 			getTagWeight: (count, maxCount) ->
 				# apply logarithmic weight algorithm
@@ -26,6 +28,7 @@ module.exports = (BasePlugin) ->
 		renderBefore: ({collection, templateData}, next) ->
 			config = @getConfig()
 			docpad = @docpad
+			plugin = @
 
 			@tagCloud = {}	# reset every time renderBefore is triggered
 			@maxCount = 0
@@ -33,7 +36,7 @@ module.exports = (BasePlugin) ->
 			tagDocs = docpad.getCollection(config.collectionName)
 			tagDocs?.forEach (doc) =>
 				tag = doc?.get('tag')
-				taggedfiles = docpad.getFiles({tags: $has: tag})
+				taggedfiles = config.getTaggedFiles.call(plugin, docpad, tag)
 				count = taggedfiles?.length or 0
 
 				@tagCloud[tag] ?=

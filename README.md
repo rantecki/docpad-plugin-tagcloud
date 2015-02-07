@@ -46,6 +46,7 @@ Note that in this example we've added the count and weight here as HTML5 data fi
 - *collectionName* : The collection containing your tag index pages.  This should probably be the same as specified for the tags plugin.
 - *getTagWeight* : Override the function used to generate the tag weights (see below).
 - *logLevel*: Override the log level for log messages from this plugin.  Defaults to 'info'.
+- *getTaggedFiles*: The function to get all source files. Override the default `docpad.getFiles({tags: $has: tag})` to use only a filtered collection like `docpad.getFiles({tags: {$has: tag}, isPublished:true})`.
 
 ### Customising the weight function
 
